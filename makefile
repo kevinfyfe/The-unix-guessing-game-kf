@@ -1,6 +1,6 @@
 all: readme.md
 
-readme.md:
+readme.md: guessinggame.sh
 	echo "The Guessing Game - By Kevin Fyfe" > readme.md
 	echo ""
 	echo "The date and time of running the program:" >> readme.md
@@ -8,6 +8,3 @@ readme.md:
 	echo ""
 	echo "The program contains the following number of rows:" >> readme.md
 	grep -c "" guessinggame.sh >> readme.md
-
-clean:
-	rm readme.md
